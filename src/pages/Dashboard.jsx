@@ -37,7 +37,7 @@ export default function Dashboard({ setPage, setOpenLead }) {
 
       {/* Modern Glass Banner */}
       <div style={{
-        background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+        background: 'linear-gradient(135deg, #411c10 0%, #9b5a19 100%)',
         borderRadius: 20, padding: '24px 32px', display: 'flex',
         alignItems: 'center', justifyContent: 'space-between',
         boxShadow: '0 10px 30px -10px rgba(99, 102, 241, 0.4)'
@@ -59,7 +59,7 @@ export default function Dashboard({ setPage, setOpenLead }) {
         </div>
         <button onClick={() => setPage('leads')} style={{
           display: 'flex', alignItems: 'center', gap: 8, padding: '12px 20px',
-          borderRadius: 12, background: '#fff', color: '#6366f1', border: 'none',
+          borderRadius: 12, background: '#fff', color: '#262208', border: 'none',
           fontSize: 14, fontWeight: 700, cursor: 'pointer', transition: '0.2s'
         }}>
           <Plus size={16} strokeWidth={3} /> Add New Lead
