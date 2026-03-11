@@ -43,12 +43,19 @@ export default function Dashboard({ setPage, setOpenLead }) {
         boxShadow: '0 10px 30px -10px rgba(99, 102, 241, 0.4)'
       }}>
         <div>
-          <h1 style={{ fontSize: 22, fontWeight: 800, color: '#fff', margin: 0, letterSpacing: '-0.02em' }}>
-            Good {new Date().getHours() < 12 ? 'morning' : new Date().getHours() < 17 ? 'afternoon' : 'evening'}, Admin
+          <h1 style={{ fontSize: 26, fontWeight: 700, color: '#fff', margin: 0, letterSpacing: '-0.05em' }}>
+            today’s focus
           </h1>
-          <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.8)', margin: '4px 0 0' }}>
-            You have <b style={{ color: '#fff' }}>{stats.newLeads}</b> new leads and <b style={{ color: '#fff' }}>{stats.scheduledVisits}</b> visits to handle today.
-          </p>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginTop: 6 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+              <div style={{ width: 6, height: 6, borderRadius: '50%', background: 'rgba(255,255,255,0.4)' }} />
+              <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.8)' }}><b>{stats.newLeads}</b> incoming</span>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+              <div style={{ width: 6, height: 6, borderRadius: '50%', background: 'rgba(255,255,255,0.4)' }} />
+              <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.8)' }}><b>{stats.scheduledVisits}</b> visits</span>
+            </div>
+          </div>
         </div>
         <button onClick={() => setPage('leads')} style={{
           display: 'flex', alignItems: 'center', gap: 8, padding: '12px 20px',
